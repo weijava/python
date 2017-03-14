@@ -7,4 +7,3 @@ import CMRS.database.mysqltest
 def hello(request):
     context = {'hello': "hello world"}
     return render(request, 'homepage.html', context)
-#aaaaaa
