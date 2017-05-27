@@ -30,11 +30,11 @@
     <meta name="author" content="Cloud9">
     <meta name="norton-safeweb-site-verification" content="1ju17eccbb7vhyaf2st7r8uxlrf5ifz1myh32gft3olhl7j00e0mzx4inm7-bg2qwmqcr60hv0wit79s52d84ozdxx5-w38m0dbfbtrnql56ykgccohb9l25np6v-uv9" />
     
-
     
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <base target="_parent" />
+    
     
     <title>CMRS</title>
     
@@ -69,11 +69,12 @@
     
     <!-- Segment.io core script & identifying user -->
     <script type="text/javascript" src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/javascripts/pages/header.js"></script>
+	<script>  function load(){window.location="#workspaces"} </script>
 </head>
 
 
 
-<body id="home" class="logged-out">
+<body id="home"class="logged-out" onLoad="load()">
 
 
 <header id="header-hav" class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -105,17 +106,13 @@
                     <li >
                         <a>联系我们</a>
                     </li>
-                    <li class="logout">
-                        <a title="Go to your Dashboard">Dashboard</a>
-                        <button class="btnLogout" role="button" id="btnLogout">Sign Out</button>
-                    </li>
                     <li class="login signin">
                         <a class="btnLogin" id="navSignUp">Try Cloud9</a>
                     </li>
                     <li class="login">
                         <a class="btnLogin" id="signIn">Sign in</a>
-                    </li>                   
-                  
+                    </li>
+                                       
                     
                     </li>
                 </ul>
@@ -144,16 +141,15 @@
 <form action="/search/" method="get">
     <select name="type"style="border-radius: 5px;height: 50px;">
     <option value="ch_medicine">中药名</option>
-    <option value="symptom">疾病名</option>
+    <option value="symptom" {{j}}>疾病名</option>
     </select>
 	
-    <input size="32" autofocus placeholder="请输入疾病或中药名称" class="nomargins noborder" type="text" name="question" style="
+    <input size="32" autofocus placeholder="请输入疾病或中药名称" class="nomargins noborder" type="text" value="{{i}}" name="question" style="
         padding: 12px 22px;
         border: none;
         border-radius: 5px;
         height: 50px;
     ">
-	
     <button type="submit" style="
         font: 500 18px/48px sans-serif;
         background-color: #9bd06c;
@@ -174,7 +170,7 @@
                 <div class="row carrousel">
                     <div class="col-md-12">
                         <div class="screenshots">
-<div style="padding:0px 275px 100px;">                                                                                        						                             
+                            <div style="padding:0px 275px 100px;">                                                                                        						                             
 <div id="myCarousel" class="carousel slide" >
 	<!-- 轮播（Carousel）指标 -->
 	<ol class="carousel-indicators">
@@ -203,8 +199,7 @@
 	<a class="carousel-control right" href="#myCarousel" 
 	   data-slide="next">&rsaquo;</a>   
 </div>   
-</div>             
-                           
+</div>
                         </div>
                     </div>
                 </div>

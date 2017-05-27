@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
-{% load staticfiles %}		
-<html lang="zh">
+<html lang="en">
 <head>
     <meta id="page-data" 
         data-user-id=""
@@ -17,7 +17,7 @@
         data-user-version=""
         data-api-url="https://api.c9.io"
         data-page-name=""
-        data-page-title="CMRS"
+        data-page-title="Cloud9  - Your development environment, in the cloud"
         data-page-properties={}
         data-login-source=""
         data-segmentio-key="661kw1sv26"
@@ -30,13 +30,22 @@
     <meta name="author" content="Cloud9">
     <meta name="norton-safeweb-site-verification" content="1ju17eccbb7vhyaf2st7r8uxlrf5ifz1myh32gft3olhl7j00e0mzx4inm7-bg2qwmqcr60hv0wit79s52d84ozdxx5-w38m0dbfbtrnql56ykgccohb9l25np6v-uv9" />
     
-
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/favicon.ico" /> 
+    <link rel="icon" type="image/x-icon" href="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/favicon.ico" /> 
     
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <base target="_parent" />
     
-    <title>CMRS</title>
+    <link rel="apple-touch-icon-precomposed" href="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"  href="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/apple-touch-icon-114x114-precomposed.png" />
+
+    <!-- Google+ page verification -->
+    <link href="https://plus.google.com/112124450587245028448" rel="publisher" />
+    
+    <title>Cloud9 - Your development environment, in the cloud</title>
     
     <!-- Bootstrap core -->
     <link href="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/stylesheets/bootstrap.min.css" rel="stylesheet">
@@ -76,6 +85,10 @@
 <body id="home" class="logged-out">
 
 
+
+
+
+
 <header id="header-hav" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div id="navBg" >
 
@@ -87,35 +100,44 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand" href="/">
+                    <span class="logo-name"></span>
+                </a>
             </div>		
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li >
-                        <a href="http://lingmiaodata.com">主页</a>
-                    </li>
-					<li>
-                        <a href="http://lingmiaodata.com/data/">方剂文献库</a>
+                        <a href="/pricing">Pricing</a>
                     </li>
                     <li>
-                        <a href="http://lingmiaodata.com/echars1/">频繁项集</a>
+                        <a href="https://c9.io/team/new?plan=School">Education</a>
                     </li>
                     <li>
-                        <a href="http://lingmiaodata.com/echars2/">关联规则</a>
-                    </li>                    
+                        <a href="https://get.c9.io/salesforce/?utm_source=c9.io&utm_medium=red%20bar&utm_campaign=introducing%20salesforce" target="_blank">Salesforce</a>
+                    </li>
+                    <li>
+                        <a href="https://community.c9.io/" target="_blank">Community</a>
+                    </li>
                     <li >
-                        <a>联系我们</a>
+                        <a href="/blog">Blog</a>
                     </li>
                     <li class="logout">
-                        <a title="Go to your Dashboard">Dashboard</a>
+                        <a href="/dashboard.html" title="Go to your Dashboard">Dashboard</a>
                         <button class="btnLogout" role="button" id="btnLogout">Sign Out</button>
                     </li>
                     <li class="login signin">
-                        <a class="btnLogin" id="navSignUp">Try Cloud9</a>
+                        <a class="btnLogin" href="/signup" id="navSignUp">Try Cloud9</a>
                     </li>
                     <li class="login">
-                        <a class="btnLogin" id="signIn">Sign in</a>
-                    </li>                   
-                  
+                        <a class="btnLogin" href="/login" id="signIn">Sign in</a>
+                    </li>
+                    
+                    <li class="altLogin">
+                        <a class="altLogin github" id="signInGitHub" href="/auth/github?r=/dashboard.html" title="Sign in with GitHub">Sign in with GitHub</a>
+                    </li>
+                    <li class="altLogin">
+                        <a class="altLogin bitbucket" id="signInBitbucket" href="/auth/bitbucket?r=/dashboard.html" title="Sign in with Bitbucket">Sign in with Bitbucket</a>
+                    </li>
                     
                     </li>
                 </ul>
@@ -124,128 +146,55 @@
     </div>
 </header>
 
-<div id="homepage" class="homepage">
-
-    <div id="top-header" class="top-header">
-        <section id="carrousel">
-
-            <div id="carrousel-page1" class="page active">
-                <div class="row payoff">
-                    <div class="col-md-12">
-                        <div>
-                            <h1>中华草药 灵邈丹方</h1>
-                            <h2>您可以输入疾病名，系统会为您推荐中药对。您也可以输入中药名，系统会返回中药简介</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row more">
-                    <div class="col-md-12">
-                        <div>
-<form action="/search/" method="get">
-    <select name="type"style="border-radius: 5px;height: 50px;">
-    <option value="ch_medicine">中药名</option>
-    <option value="symptom">疾病名</option>
-    </select>
-	
-    <input size="32" autofocus placeholder="请输入疾病或中药名称" class="nomargins noborder" type="text" name="question" style="
-        padding: 12px 22px;
-        border: none;
-        border-radius: 5px;
-        height: 50px;
-    ">
-	
-    <button type="submit" style="
-        font: 500 18px/48px sans-serif;
-        background-color: #9bd06c;
-        margin-top: -2px;
-        border: none;
-        box-sizing: border-box;	
-        height: 50px;
-    ">Search</button>
-    
-    <div style="color: #fff;">
-        <strong class="form-signup-error">
-        </strong>
-    </div>
-</form>
-                        </div>
-                    </div>
-                </div>
-                <div class="row carrousel">
-                    <div class="col-md-12">
-                        <div class="screenshots">
-<div style="padding:0px 275px 100px;">                                                                                        						                             
-<div id="myCarousel" class="carousel slide" >
-	<!-- 轮播（Carousel）指标 -->
-	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		<li data-target="#myCarousel" data-slide-to="1"></li>
-		<li data-target="#myCarousel" data-slide-to="2"></li>
-	</ol>   
-	<!-- 轮播（Carousel）项目 -->
-	<div class="carousel-inner">
-		<div class="item active">
-			<img src="{% static "images/homepage.png"%}" alt="First slide" >
-			<div class="carousel-caption"></div>
-		</div>
-		<div class="item">
-			<img src="{% static "images/docter.png"%}" alt="Second slide">
-			<div class="carousel-caption"></div>
-		</div>
-		<div class="item">
-			<img src="{% static "images/medicine.png"%}" alt="Third slide">
-			<div class="carousel-caption"></div>
-		</div>
-	</div>
-	<!-- 轮播（Carousel）导航 -->
-	<a class="carousel-control left" href="#myCarousel" 
-	   data-slide="prev">&lsaquo;</a>
-	<a class="carousel-control right" href="#myCarousel" 
-	   data-slide="next">&rsaquo;</a>   
-</div>   
-</div>             
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-        </section>
-    </div>
 
     <a name="workspaces"></a>
     <div class="featurette" id="workspaces">
         <section>
             <div class="row">
-                <h1 class="headline">{{a}}<span class="keyword">{{b}}</span></h1>
+                <h1 class="headline">Powerful <span class="keyword">Workspaces</span></h1>
             </div>
             <div class="row">
                 <div class="col-md-6 workspaces-divider">
-                    <h3>{{c}}</h3>
-                    <p>                       {{d}}
+                    <h3>Set up your system without any hassle</h3>
+                    <p>
+                        Simply pick your configuration and develop your app.
+                        No need to spend valuable development time on system setup and maintenance.
+                        You can create, build and run any development stack in seconds.
+                        We maintain it, you control it.
                     </p>
                     <div id="workspace-types">
-                        <img src="{{e}}" alt width="200" height="200" title="Create a full Django workspace instantly" />                                       
+                        <img src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/workspaces/workspace_type_django.png" alt="Django" title="Create a full Django workspace instantly" />
+                        <img src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/workspaces/workspace_type_wordpress.png" alt="WordPress" title="Create a full WordPress workspace instantly" />
+                        <img src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/workspaces/workspace_type_meteor.png" alt="Meteor" title="Create a full Meteor workspace instantly" />
+                        <img src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/workspaces/workspace_type_c.png" alt="C or C++" title="Create a full C or C++ workspace instantly" />
+                        <img src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/workspaces/workspace_type_ruby_on_rails.png" alt="Ruby on Rails" title="Create a full Ruby on Rails workspace instantly" />
+                        <img src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/workspaces/workspace_type_nodejs.png" alt="Node.js" title="Create a full Node.js workspace instantly" />
+                        <img src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/workspaces/workspace_type_php.png" alt="PHP" title="Create a full PHP workspace instantly" />
+                        <img src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/workspaces/workspace_type_html5.png" alt="HTML5" title="Create a full HTML5 workspace instantly" />
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h3>{{g}}</h3>
+                    <h3>All the freedom you��d expect</h3>
                     <p>
-                        {{h1}}
+                        Workspaces are powered by Docker Ubuntu containers that give you full freedom over your environment, including sudo rights.
+                        Do a git push, compile SASS, see server output, and Run apps easily with the built-in Terminal and Runners.
                     </p>
-					<p>
-                        {{h2}}
-                    </p>
-					<p>
-                        {{h3}}
-                    </p>
-                   
+                    <div id="workspaces-linux-environment">
+                        <pre class="sudoblock">
+<span>sudo apt-get install imagemagick<div class="cursor"></div></span>
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done</pre>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
+
+   
+
   
-</div>
+
 
 
 

@@ -69,6 +69,7 @@
     
     <!-- Segment.io core script & identifying user -->
     <script type="text/javascript" src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/javascripts/pages/header.js"></script>
+	<script src="{% static "js/echarts.min.js"%}"></script>
 </head>
 
 
@@ -114,8 +115,9 @@
                     </li>
                     <li class="login">
                         <a class="btnLogin" id="signIn">Sign in</a>
-                    </li>                   
-                  
+                    </li>
+                    
+                    
                     
                     </li>
                 </ul>
@@ -126,124 +128,132 @@
 
 <div id="homepage" class="homepage">
 
-    <div id="top-header" class="top-header">
-        <section id="carrousel">
-
-            <div id="carrousel-page1" class="page active">
-                <div class="row payoff">
-                    <div class="col-md-12">
-                        <div>
-                            <h1>中华草药 灵邈丹方</h1>
-                            <h2>您可以输入疾病名，系统会为您推荐中药对。您也可以输入中药名，系统会返回中药简介</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row more">
-                    <div class="col-md-12">
-                        <div>
-<form action="/search/" method="get">
-    <select name="type"style="border-radius: 5px;height: 50px;">
-    <option value="ch_medicine">中药名</option>
-    <option value="symptom">疾病名</option>
-    </select>
-	
-    <input size="32" autofocus placeholder="请输入疾病或中药名称" class="nomargins noborder" type="text" name="question" style="
-        padding: 12px 22px;
-        border: none;
-        border-radius: 5px;
-        height: 50px;
-    ">
-	
-    <button type="submit" style="
-        font: 500 18px/48px sans-serif;
-        background-color: #9bd06c;
-        margin-top: -2px;
-        border: none;
-        box-sizing: border-box;	
-        height: 50px;
-    ">Search</button>
-    
-    <div style="color: #fff;">
-        <strong class="form-signup-error">
-        </strong>
-    </div>
-</form>
-                        </div>
-                    </div>
-                </div>
-                <div class="row carrousel">
-                    <div class="col-md-12">
-                        <div class="screenshots">
-<div style="padding:0px 275px 100px;">                                                                                        						                             
-<div id="myCarousel" class="carousel slide" >
-	<!-- 轮播（Carousel）指标 -->
-	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		<li data-target="#myCarousel" data-slide-to="1"></li>
-		<li data-target="#myCarousel" data-slide-to="2"></li>
-	</ol>   
-	<!-- 轮播（Carousel）项目 -->
-	<div class="carousel-inner">
-		<div class="item active">
-			<img src="{% static "images/homepage.png"%}" alt="First slide" >
-			<div class="carousel-caption"></div>
-		</div>
-		<div class="item">
-			<img src="{% static "images/docter.png"%}" alt="Second slide">
-			<div class="carousel-caption"></div>
-		</div>
-		<div class="item">
-			<img src="{% static "images/medicine.png"%}" alt="Third slide">
-			<div class="carousel-caption"></div>
-		</div>
-	</div>
-	<!-- 轮播（Carousel）导航 -->
-	<a class="carousel-control left" href="#myCarousel" 
-	   data-slide="prev">&lsaquo;</a>
-	<a class="carousel-control right" href="#myCarousel" 
-	   data-slide="next">&rsaquo;</a>   
-</div>   
-</div>             
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-        </section>
+    <div id="top-header" style="background-image: url('https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/header_bg.jpg'), 
+	url('https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/images/header_bg_repeat.jpg');
+    background-position: left 0, left top;
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed, fixed;
+    min-height: 75px;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    position: relative;">
+       
     </div>
 
     <a name="workspaces"></a>
-    <div class="featurette" id="workspaces">
-        <section>
-            <div class="row">
-                <h1 class="headline">{{a}}<span class="keyword">{{b}}</span></h1>
-            </div>
-            <div class="row">
-                <div class="col-md-6 workspaces-divider">
-                    <h3>{{c}}</h3>
-                    <p>                       {{d}}
-                    </p>
-                    <div id="workspace-types">
-                        <img src="{{e}}" alt width="200" height="200" title="Create a full Django workspace instantly" />                                       
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h3>{{g}}</h3>
-                    <p>
-                        {{h1}}
-                    </p>
-					<p>
-                        {{h2}}
-                    </p>
-					<p>
-                        {{h3}}
-                    </p>
-                   
-                </div>
-            </div>
-        </section>
-    </div>
+         <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:500px;"></div>
+    <script type="text/javascript">
+	var myChart = echarts.init(document.getElementById('main'));
+var dataAxis = ['茯苓,黄芪', '丹参,黄芪', '丹参,茯苓', '白芍,黄芪', '熟附片,黄芪','白术,黄芪', '熟附片,茯苓', '白术,茯苓', '白芍,丹参', '丹参,茯苓,黄芪', '熟附片,丹参', '车前子,黄芪','白芍,茯苓','白芍,丹参,黄芪','白术,白芍', '熟附片,茯苓,黄芪', '车前子,丹参', '熟附片,丹参,黄芪', '白芍,茯苓,黄芪', '白术,白芍,黄芪','白术,茯苓,黄芪','白术,丹参','车前子,茯苓','车前子,丹参,黄芪','熟附片,丹参,茯苓','白术,丹参,黄芪','白芍,茯苓,丹参','白芍,熟附片','车前子,茯苓,黄芪','白芍,熟附片,黄芪','白芍,茯苓,丹参,黄芪','白术,白芍,茯苓','白术,丹参,白芍','桂枝,黄芪','熟附片,丹参,茯苓,黄芪','白术,熟附片','车前子,白芍','车前子,熟附片','白术,丹参,白芍,黄芪','白术,丹参,茯苓','党参,黄芪','白术,白芍,茯苓,黄芪','车前子,熟附片,黄芪','柴胡,黄芪','当归,黄芪','车前子,白芍,黄芪','党参,茯苓','当归,茯苓','白芍,熟附片,丹参','白芍,熟附片,丹参,黄芪','白术,熟附片,黄芪','车前子,茯苓,丹参','酸枣仁,黄芪','白芍,熟附片,茯苓','车前子,白术','麦冬,黄芪','南葶苈子,黄芪','川芎,丹参','白术,丹参,茯苓,黄芪','车前子,白芍,丹参','桂枝,茯苓','白术,熟附片,茯苓','柴胡,丹参','麦冬,丹参','甘草,黄芪','酸枣仁,丹参','白芍,熟附片,茯苓,黄芪','车前子,熟附片,丹参','车前子,茯苓,丹参,黄芪','南葶苈子,熟附片','桂枝,丹参','南葶苈子,丹参'];
+var data = [220, 214, 189, 189, 184, 181, 178, 177, 174, 172, 170, 166, 165, 163, 161, 160, 160, 158, 156, 154,154,151,149,147,145,143,142,141,139,138,137,137,136,136,135,135,134,134,132,131,131,130,130,130,130,129,128,128,127,125,125,125,125,124,124,124,124,124,123,123,123,122,122,122,122,122,121,121,121,121,120,120];
+var yMax = 358;
+var dataShadow = [];
+
+for (var i = 0; i < data.length; i++) {
+    dataShadow.push(yMax);
+}
+
+option = {
+    title: {
+        text: '频繁项集：以心衰病人为例',
+		subtext:'纵轴为同时出现次数，最小支持度设置为120'
+    },
+	 tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    xAxis: {
+        data: dataAxis,
+        axisLabel: {
+            inside: true,
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        axisTick: {
+            show: false
+        },
+        axisLine: {
+            show: false
+        },
+        z: 10
+    },
+    yAxis: {
+        axisLine: {
+            show: false
+        },
+        axisTick: {
+            show: false
+        },
+        axisLabel: {
+            textStyle: {
+                color: '#999'
+            }
+        }
+    },
+    dataZoom: [
+        {
+            type: 'inside'
+        }
+    ],
+    series: [
+        { // For shadow
+			name:'总次数',
+            type: 'bar',
+            itemStyle: {
+                normal: {color: 'rgba(0,0,0,0.05)'}
+            },
+            barGap:'-100%',
+            barCategoryGap:'40%',
+            data: dataShadow,
+            animation: false
+        },
+        {
+			name:'出现次数',
+            type: 'bar',
+            itemStyle: {
+                normal: {	                 		
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ]
+                    )
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]
+                    )
+                }
+            },
+            data: data
+        }
+    ]
+};
+
+// Enable data zoom when user click bar.
+var zoomSize = 6;
+myChart.on('click', function (params) {
+    console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+    myChart.dispatchAction({
+        type: 'dataZoom',
+        startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+        endValue: dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+    });
+});
+myChart.setOption(option);
+    </script>
   
 </div>
 
