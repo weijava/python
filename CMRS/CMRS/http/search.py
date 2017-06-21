@@ -13,15 +13,15 @@ def search_form(request):
 def data_search(request):
     request.encoding = 'utf-8'
     q = str(request.GET['name'])
-    sql1 = 'SELECT name,peifang,laiyuan,yongfa,fangjie FROM fangji WHERE name="%s"' % q
+    sql1 = 'SELECT name,peifang,laiyuan,yongfa,fangjie,shiyongqk,reference FROM fangji WHERE name="%s"' % q
     sql2 = 'SELECT name,symptom FROM zhongyaodui WHERE symptom like "%' + q + '%"'
 
     result, num = mysql(sql1)
 
-    context = {'a': result[0].get('name'), 'b': "简介", 'c': "配方介绍",
+    context = {'a': result[0].get('name'), 'b': "简介", 'c': "方剂知识源",
                        'd': result[0].get('laiyuan') + result[0].get('peifang') + result[0].get('yongfa'),
-               'e': "http://images2015.cnblogs.com/blog/807735/201703/807735-20170320120842924-1769797853.jpg", 'g': "方解",
-                       'h1': result[0].get('fangjie')}
+               'e': "http://images2015.cnblogs.com/blog/807735/201703/807735-20170320120842924-1769797853.jpg", 'g': "使用情况",
+                       'h1': result[0].get('shiyongqk'),'h2': "参考文献",'h3': result[0].get('reference')}
 
     return render_to_response('homepage_data_search.html', context)
 
