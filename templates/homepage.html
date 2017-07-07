@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+{% load staticfiles %}		
+<html lang="zh">
+<head>
+    <meta id="page-data" 
+        data-user-id=""
+        data-user-email=""
+        data-user-username=""
+        data-user-premium="false"
+        data-user-created="0"
+        data-user-id=""
+        data-user-active=""
+        data-user-region=""
+        data-user-version=""
+        data-page-name=""
+        data-page-title="灵邈丹方"
+        data-page-properties={}
+        data-login-source=""
+    >
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="灵邈丹方, lingmiaodata, 灵邈数据, 灵邈" />
+    <meta name="author" content="魏嘉旺">
+    
+    <title>灵邈丹方</title>
+    
+    <!-- Bootstrap core -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">   
+    
+    <!-- Custom styles -->
+    <link href="../static/css/c9.css" rel="stylesheet">
+    <link href="../static/css/homepage.css" rel="stylesheet">   
+	
+	<!-- My styles -->
+	<link href="../static/css/my_style.css" rel="stylesheet">
+	
+	<!-- Picture carousel -->
+	<script type="text/javascript" src="../static/js/jquery-1.11.0.min.js"></script>
+</head>
+
+
+<body id="home" class="logged-out">
+
+<header id="header-hav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div id="navBg" >
+
+        <section id="navbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>		
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a style="font-size:18px" href="http://lingmiaodata.com">主页</a>
+                    </li>
+					<li>
+                        <a style="font-size:18px" href="http://lingmiaodata.com/data/">方剂文献库</a>
+                    </li>
+                    <li>
+                        <a style="font-size:18px" href="http://lingmiaodata.com/echars1/">中草药对</a>
+                    </li>
+                    <li>
+                        <a style="font-size:18px" href="http://lingmiaodata.com/echars2/">关联规则</a>
+                    </li>                    
+                    <li >
+                        <a style="font-size:18px">联系我们</a>
+                    </li>
+                    <li class="logout">
+                        <a title="Go to your Dashboard">Dashboard</a>
+                        <button class="btnLogout" role="button" id="btnLogout">Sign Out</button>
+                    </li>
+                    <li class="login signin">
+                        <a class="btnLogin" id="navSignUp">Try Cloud9</a>
+                    </li>
+                    <li class="login">
+                        <a style="font-size:18px" class="btnLogin" id="signIn">登陆</a>
+                    </li>                   
+                </ul>
+            </div>
+        </section>
+    </div>
+</header>
+
+<div id="homepage" class="homepage">
+
+    <div id="top-header" class="top-header" style="background:url(http://www.pharmnet.com.cn/tcm/images/trad_1.gif) repeat fixed top">
+        <section id="carrousel">
+
+            <div id="carrousel-page1" class="page active">
+                <div class="row payoff">
+                    <div class="col-md-12">
+                        <div>
+                            <h1>中华草药 灵邈丹方</h1>
+                           <h2>您可以输入疾病名，系统会为您推荐中药对。您也可以输入中药名，系统会返回中药简介</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row more">
+                    <div class="col-md-12">
+                        <div>
+<form action="/search/" method="get">
+    <select name="type"style="border-radius: 5px;height: 50px;">
+    <option value="ch_medicine">中药名</option>
+    <option value="symptom">疾病名</option>
+    </select>
+	
+    <input size="32" autofocus placeholder="请输入疾病或中药名称" class="nomargins noborder" type="text" name="question" style="
+        padding: 12px 22px;
+        border: none;
+        border-radius: 5px;
+        height: 50px;
+    ">
+	
+    <button type="submit" style="
+        font: 500 18px/48px sans-serif;
+        background-color: #9bd06c;
+        margin-top: -2px;
+        border: none;
+        box-sizing: border-box;	
+        height: 50px;">搜索</button>
+    
+    <div style="color: #fff;">
+        <strong class="form-signup-error">
+        </strong>
+    </div>
+</form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row carrousel">
+                    <div class="col-md-12">
+                        <div class="screenshots">
+<div style="padding:0px 275px 100px;">                                                                                        						                             
+<div id="myCarousel" class="carousel slide" >
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>   
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="{% static "images/homepage.png"%}" alt="First slide" >
+			<div class="carousel-caption"></div>
+		</div>
+		<div class="item">
+			<img src="{% static "images/docter.png"%}" alt="Second slide">
+			<div class="carousel-caption"></div>
+		</div>
+		<div class="item">
+			<img src="{% static "images/medicine.png"%}" alt="Third slide">
+			<div class="carousel-caption"></div>
+		</div>
+	</div>
+	<!-- 轮播（Carousel）导航 -->
+	<a class="carousel-control left" href="#myCarousel" 
+	   data-slide="prev">&lsaquo;</a>
+	<a class="carousel-control right" href="#myCarousel" 
+	   data-slide="next">&rsaquo;</a>   
+</div>   
+</div>             
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+    </div>
+
+    <a name="workspaces"></a>
+    <div class="featurette" id="workspaces">
+        <section>
+            <div class="row">
+			<h1 class="headline" style="color: #e59328">{{a}}<span class="keyword" style="color: #000000">{{b}}</span></h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 workspaces-divider">
+                    <h3 style="background:url(http://www.pharmnet.com.cn/tcm/images/trad_2.gif) repeat fixed top;">{{c}}</h3>
+                    <p>                       {{d}}
+                    </p>
+                    <div id="workspace-types">
+                        <img src="{{e}}" alt width="200" height="200" title="Create a full Django workspace instantly" />                                       
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 style="background:url(http://www.pharmnet.com.cn/tcm/images/trad_2.gif) repeat fixed top;">{{g}}</h3>
+                    <p>
+                        {{h1}}
+                    </p>
+					<p>
+                        {{h2}}
+                    </p>
+					<p>
+                        {{h3}}
+                    </p>
+                   
+                </div>
+            </div>
+        </section>
+    </div>
+  
+</div>
+
+		</div>
+<div id="foot" class="center">
+    版权所有：@2017 上海灵邈数据科技有限公司作者魏嘉旺 All Rights Reserved 
+	<span id="cnzz_stat_icon_1261562109"><a href="http://www.cnzz.com/stat/website.php?web_id=1261562109" target="_blank" title="站长统计">
+	<img border="0" hspace="0" vspace="0" src="https://icon.cnzz.com/img/pic.gif"></a></span>
+	<script src="https://s95.cnzz.com/z_stat.php?id=1261562109&amp;show=pic" type="text/javascript"></script>
+	<script src="https://c.cnzz.com/core.php?web_id=1261562109&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+</div>
+		<!--Bootstrap core JavaScript -->
+		<script type="text/javascript" src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/javascripts/bootstrap.min.js"></script>
+	
+</body>
+</html>

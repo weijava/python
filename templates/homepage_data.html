@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+{% load staticfiles %}		
+<html lang="zh">
+<head>
+   <meta id="page-data" 
+        data-user-id=""
+        data-user-email=""
+        data-user-username=""
+        data-user-premium="false"
+        data-user-created="0"
+        data-user-id=""
+        data-user-active=""
+        data-user-region=""
+        data-user-version=""
+        data-page-name=""
+        data-page-title="灵邈丹方"
+        data-page-properties={}
+        data-login-source=""
+    >
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="灵邈丹方, lingmiaodata, 灵邈数据, 灵邈" />
+    <meta name="author" content="魏嘉旺">
+    
+    <title>方剂文献库</title>
+    
+	<!-- Bootstrap core -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">   
+    
+    <!-- Custom styles -->
+    <link href="../static/css/c9.css" rel="stylesheet">
+    <link href="../static/css/homepage.css" rel="stylesheet">  
+	
+	<!-- My styles -->
+	<link href="../static/css/my_style.css" rel="stylesheet">
+</head>
+
+
+<body id="home" class="logged-out">
+
+
+<header id="header-hav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div id="navBg" >
+
+        <section id="navbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>		
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                                        <li>
+                        <a style="font-size:18px" href="http://lingmiaodata.com">主页</a>
+                    </li>
+					<li>
+                        <a style="font-size:18px" href="http://lingmiaodata.com/data/">方剂文献库</a>
+                    </li>
+                    <li>
+                        <a style="font-size:18px" href="http://lingmiaodata.com/echars1/">中草药对</a>
+                    </li>
+                    <li>
+                        <a style="font-size:18px" href="http://lingmiaodata.com/echars2/">关联规则</a>
+                    </li>                    
+                    <li >
+                        <a style="font-size:18px">联系我们</a>
+                    </li>
+                    <li class="logout">
+                        <a title="Go to your Dashboard">Dashboard</a>
+                        <button class="btnLogout" role="button" id="btnLogout">Sign Out</button>
+                    </li>
+                    <li class="login signin">
+                        <a class="btnLogin" id="navSignUp">Try Cloud9</a>
+                    </li>
+                    <li class="login">
+                        <a style="font-size:18px" class="btnLogin" id="signIn">登陆</a>
+                    </li>                              
+                </ul>
+            </div>
+        </section>
+    </div>
+</header>
+
+<div id="homepage" class="homepage">
+
+    <div id="top-header" style="background:url(http://www.pharmnet.com.cn/tcm/images/trad_1.gif) repeat fixed center;
+    min-height: 75px;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    position: relative;">
+       
+    </div>
+
+    <a name="workspaces"></a>
+         <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="padding:0px 100px 100px 100px;">
+	 <h3 class="org_title" style="color: #e59328">解表剂</h3>
+                    <HR style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    <table border="0" width="100%"style="font-family: "Arial", "Microsoft YaHei";font-size: 14px;line-height: 1.8;text-align: left; ">
+                         <tr>
+                            <td width="25%"><a href="./search/?name=射干麻黄汤" class="color">射干麻黄汤</a></td>
+                            <td width="25%"><a href="./search/?name=桂枝汤" class="color">桂枝汤</a></td>
+							<td width="25%"><a href="./search/?name=九味羌活汤" class="color">九味羌活汤</a></td>
+                            <td width="25%"><a href="./search/?name=加味香苏散" class="color">加味香苏散</a></td>							
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=小青龙汤" class="color">小青龙汤</a></td>
+                            <td><a href="./search/?name=银翘散" class="color">银翘散</a></td>
+							 <td><a href="./search/?name=桑菊饮" class="color">桑菊饮</a></td>
+                            <td><a href="./search/?name=麻杏甘石汤" class="color">麻杏甘石汤</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=柴葛解肌汤" class="color">柴葛解肌汤</a></td>
+                            <td><a href="./search/?name=升麻葛根汤" class="color">升麻葛根汤</a></td>
+							 <td><a href="./search/?name=败毒散" class="color">败毒散</a></td>
+                            <td><a href="./search/?name=再造散" class="color">再造散</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=加减葳蕤汤" class="color">加减葳蕤汤</a></td>
+                            <td><a href="./search/?name=麻黄附子细辛汤" class="color">麻黄附子细辛汤</a></td>
+                        </tr>                      
+                    </table>
+                    <br />
+					
+	<h3 class="org_title" style="color: #e59328">泻下剂</h3>
+                    <HR style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    <table border="0" width="100%"style="font-family: "Arial", "Microsoft YaHei";font-size: 14px;line-height: 1.8;text-align: left;">
+                         <tr>
+                            <td width="25%"><a href="./search/?name=大承气汤" class="color">大承气汤</a></td>
+                            <td width="25%"><a href="./search/?name=大黄牡丹汤" class="color">大黄牡丹汤</a></td>
+							<td width="25%"><a href="./search/?name=大黄附子汤" class="color">大黄附子汤</a></td>
+                            <td width="25%"><a href="./search/?name=温脾汤" class="color">温脾汤</a></td>							
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=麻子仁丸" class="color">麻子仁丸</a></td>
+                            <td><a href="./search/?name=十枣汤" class="color">十枣汤</a></td>
+							 <td><a href="./search/?name=增液承气汤" class="color">增液承气汤</a></td>
+                            <td><a href="./search/?name=舟车丸" class="color">舟车丸</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=黄龙汤" class="color">黄龙汤</a></td>
+                            <td><a href="./search/?name=新加黄龙汤" class="color">新加黄龙汤</a></td>							
+                        </tr>
+                                              
+                    </table>
+                    <br />
+	<h3 class="org_title" style="color: #e59328">和解剂</h3>
+                    <HR style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    <table border="0" width="100%"style="font-family: "Arial", "Microsoft YaHei";font-size: 14px;line-height: 1.8;text-align: left;">
+                         <tr>
+                            <td width="25%"><a href="./search/?name=小柴胡汤" class="color">小柴胡汤</a></td>
+                            <td width="25%"><a href="./search/?name=蒿芩清胆汤" class="color">蒿芩清胆汤</a></td>
+							<td width="25%"><a href="./search/?name=四逆散" class="color">四逆散</a></td>
+                            <td width="25%"><a href="./search/?name=逍遥散" class="color">逍遥散</a></td>							
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=痛泻药方" class="color">痛泻药方</a></td>
+                            <td><a href="./search/?name=半夏泻心汤" class="color">半夏泻心汤</a></td>							
+                        </tr>                                        
+                    </table>
+                    <br />
+	<h3 class="org_title" style="color: #e59328">清热剂</h3>
+                    <HR style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    <table border="0" width="100%"style="font-family: "Arial", "Microsoft YaHei";font-size: 14px;line-height: 1.8;text-align: left;">
+                       <tr>
+                            <td width="25%"><a href="./search/?name=白虎汤" class="color">白虎汤</a></td>
+                            <td width="25%"><a href="./search/?name=竹叶石膏汤" class="color">竹叶石膏汤</a></td>
+							<td width="25%"><a href="./search/?name=清营汤" class="color">清营汤</a></td>
+                            <td width="25%"><a href="./search/?name=犀角地黄汤" class="color">犀角地黄汤</a></td>							
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=黄连解毒汤" class="color">黄连解毒汤</a></td>
+                            <td><a href="./search/?name=凉膈散" class="color">凉膈散</a></td>
+							 <td><a href="./search/?name=普济消毒饮" class="color">普济消毒饮</a></td>
+                            <td><a href="./search/?name=清瘟败毒饮" class="color">清瘟败毒饮</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=导赤散" class="color">导赤散</a></td>
+                            <td><a href="./search/?name=泻白散" class="color">泻白散</a></td>
+							 <td><a href="./search/?name=龙胆泻肝汤" class="color">龙胆泻肝汤</a></td>
+                            <td><a href="./search/?name=左金丸" class="color">左金丸</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=清胃散" class="color">清胃散</a></td>
+                            <td><a href="./search/?name=玉女煎" class="color">玉女煎</a></td>
+							<td><a href="./search/?name=芍药汤" class="color">芍药汤</a></td>
+                            <td><a href="./search/?name=白头翁汤" class="color">白头翁汤</a></td>
+                        </tr>    
+						<tr>
+                            <td><a href="./search/?name=青蒿鳖甲汤" class="color">青蒿鳖甲汤</a></td>
+                            <td><a href="./search/?name=清骨散" class="color">清骨散</a></td>
+							<td><a href="./search/?name=当归六黄汤" class="color">当归六黄汤</a></td>
+                            <td><a href="./search/?name=苇茎汤" class="color">苇茎汤</a></td>
+                        </tr>  
+						<tr>
+                            <td><a href="./search/?name=牛蒡解肌汤" class="color">牛蒡解肌汤</a></td>
+                            <td><a href="./search/?name=四妙勇安汤" class="color">四妙勇安汤</a></td>
+							<td><a href="./search/?name=秦艽鳖甲散" class="color">秦艽鳖甲散</a></td>
+                            <td><a href="./search/?name=五味消毒饮" class="color">五味消毒饮</a></td>
+                        </tr>  						
+                    </table>
+                    <br />
+	<h3 class="org_title" style="color: #e59328">祛暑剂</h3>
+                    <HR style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    <table class="black" border="0" width="100%" style="font-family: "Arial", "Microsoft YaHei";font-size: 14px;line-height: 1.8;text-align: left;">
+                        <tr>
+                            <td width="25%"><a href="./search/?name=新加香薷饮">新加香薷饮</a></td>
+                            <td width="25%"><a href="./search/?name=六一散">六一散</a></td>
+							<td width="25%"><a href="./search/?name=清络饮">清络饮</a></td>
+                            <td width="25%"><a href="./search/?name=清暑益气汤">清暑益气汤</a></td>							
+                        </tr>                                     
+                    </table>
+                    <br />		
+<h3 class="org_title" style="color: #e59328">温里剂</h3>
+                    <HR style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    <table class="black" border="0" width="100%"style="font-family: "Arial", "Microsoft YaHei";font-size: 14px;line-height: 1.8;text-align: left;">
+                       <tr>
+                            <td width="25%"><a href="./search/?name=理中丸">理中丸</a></td>
+                            <td width="25%"><a href="./search/?name=吴茱萸汤">吴茱萸汤</a></td>
+							<td width="25%"><a href="./search/?name=大建中汤">大建中汤</a></td>
+                            <td width="25%"><a href="./search/?name=小建中汤">小建中汤</a></td>							
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=四逆汤">四逆汤</a></td>
+                            <td><a href="./search/?name=阳和汤">阳和汤</a></td>
+							 <td><a href="./search/?name=回阳救急汤">回阳救急汤</a></td>
+                            <td><a href="./search/?name=当归四逆汤">当归四逆汤</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=黄芪桂枝五物汤">黄芪桂枝五物汤</a></td>
+ 						 </tr>
+                    </table>
+                    <br />
+<h3 class="org_title" style="color: #e59328">表里双解剂</h3>
+                    <HR style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    <table class="black" border="0" width="100%"style="font-family: "Arial", "Microsoft YaHei";font-size: 14px;line-height: 1.8;text-align: left;">
+                       <tr>
+                            <td width="25%"><a href="./search/?name=葛根芩连汤">葛根芩连汤</a></td>
+                            <td width="25%"><a href="./search/?name=石膏汤">石膏汤</a></td>
+							<td width="25%"><a href="./search/?name=五积散">五积散</a></td>
+                            <td width="25%"><a href="./search/?name=大柴胡汤">大柴胡汤</a></td>							
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=防风通圣散">防风通圣散</a></td>
+                     	 </tr>			
+                    </table>
+                    <br />
+<h3 class="org_title" style="color: #e59328">补益剂</h3>
+                    <HR style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    <table class="black" border="0" width="100%"style="font-family: "Arial", "Microsoft YaHei";font-size: 14px;line-height: 1.8;text-align: left;">
+                       <tr>
+                            <td width="25%"><a href="./search/?name=四君子汤">四君子汤</a></td>
+                            <td width="25%"><a href="./search/?name=参苓白术散">参苓白术散</a></td>
+							<td width="25%"><a href="./search/?name=补中益气汤">补中益气汤</a></td>
+                            <td width="25%"><a href="./search/?name=完带汤">完带汤</a></td>							
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=玉屏风散">玉屏风散</a></td>
+                            <td><a href="./search/?name=生脉散">生脉散</a></td>
+							 <td><a href="./search/?name=四物汤">四物汤</a></td>
+                            <td><a href="./search/?name=当归补血汤">当归补血汤</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=归脾汤">归脾汤</a></td>
+                            <td><a href="./search/?name=内补黄芪汤">内补黄芪汤</a></td>
+							 <td><a href="./search/?name=炙甘草汤">炙甘草汤</a></td>
+                            <td><a href="./search/?name=泰山磐石散">泰山磐石散</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=六味地黄丸">六味地黄丸</a></td>
+                            <td><a href="./search/?name=左归丸">左归丸</a></td>
+							<td><a href="./search/?name=大补阴丸">大补阴丸</a></td>
+                            <td><a href="./search/?name=一贯煎">一贯煎</a></td>
+                        </tr>    
+						<tr>
+                            <td><a href="./search/?name=补肺阿胶汤">补肺阿胶汤</a></td>
+                            <td><a href="./search/?name=肾气丸">肾气丸</a></td>
+							<td><a href="./search/?name=右归丸">右归丸</a></td>
+                            <td><a href="./search/?name=地黄饮子">地黄饮子</a></td>
+                        </tr>  
+						<tr>
+                            <td><a href="./search/?name=虎潜丸">虎潜丸</a></td>                           
+                        </tr>  						
+                    </table>
+                    <br />
+<h3 class="org_title" style="color: #e59328">安神剂</h3>
+                    <HR style="FILTER: alpha(opacity=0,finishopacity=100,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    <table class="black" border="0" width="100%"style="font-family: "Arial", "Microsoft YaHei";font-size: 14px;line-height: 1.8;text-align: left;">
+                       <tr>
+                            <td width="25%"><a href="./search/?name=朱砂安神丸">朱砂安神丸</a></td>
+                            <td width="25%"><a href="./search/?name=磁朱丸">磁朱丸</a></td>
+							<td width="25%"><a href="./search/?name=珍珠母丸">珍珠母丸</a></td>
+                            <td width="25%"><a href="./search/?name=天王补心丹">天王补心丹</a></td>							
+                        </tr>
+                        <tr>
+                            <td><a href="./search/?name=酸枣仁汤">酸枣仁汤</a></td>
+                            <td><a href="./search/?name=甘麦大枣汤">甘麦大枣汤</a></td>							
+                        </tr>                      			
+                    </table>
+                    <br />
+				
+	</div>
+   
+  
+</div>
+
+
+
+		</div>
+<div id="foot" class="center">
+    版权所有：@2017 上海灵邈数据科技有限公司作者魏嘉旺 All Rights Reserved 
+	<span id="cnzz_stat_icon_1261562109"><a href="http://www.cnzz.com/stat/website.php?web_id=1261562109" target="_blank" title="站长统计">
+	<img border="0" hspace="0" vspace="0" src="https://icon.cnzz.com/img/pic.gif"></a></span>
+	<script src="https://s95.cnzz.com/z_stat.php?id=1261562109&amp;show=pic" type="text/javascript"></script>
+	<script src="https://c.cnzz.com/core.php?web_id=1261562109&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+</div>
+		<!--Bootstrap core JavaScript -->
+		<script type="text/javascript" src="https://static.c9.io/nc-3.1.3492-89e670f8/static/homepage/javascripts/bootstrap.min.js"></script>
+
+</body>
+</html>

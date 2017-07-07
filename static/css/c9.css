@@ -1,0 +1,738 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+body {
+	color: #252525;
+	font-family: "HelveticaNeue-Thin", "Helvetica Neue Thin", "Helvetica Neue", "Open Sans Light", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 200; 
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	background: #fff;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	padding: 0;
+}
+div {
+	display: block;
+}
+p {
+	line-height: 1.6;
+}
+a, a:active, a:hover {
+	color: #1aa6da;
+}
+hr {
+	background: url("../images/bg_hr.png") center;
+	height: 4px;
+	width: 90%;
+}
+em {
+	font-style: italic;
+}
+h1 {
+	font-size: 42px;
+	font-weight: 200; 
+	color: #000;
+}
+h2 {
+	font-size: 36px;
+	font-weight: 100; 
+}
+h3 {
+	font-size: 26px;
+}
+h4 {
+	font-size: 20px;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	body {
+		font-size: 12px;
+	}
+	h1 {
+		font-size: 30px;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	h4 {
+		font-size: 18px;
+	}
+}
+
+
+/* SHARED CUSTOM DEFINITIONS
+-------------------------------------------------- */
+section {
+	width: 1140px;
+	margin: 0 auto;
+	padding: 0 20px 0 20px;
+}
+.content {
+	margin: 80px auto 80px auto;
+}
+button {
+	line-height: 48px;
+	background-color: #bfe965;
+	color: #fff;
+	font-size: 20px;
+	margin: 5px 0 0 0;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0 20px 0 20px;	
+}
+button:hover {
+	background-color: #bfe965;
+	color: #fff;
+	border: 1px solid #bfe965;
+}
+.keyword {
+	font-family: "HelveticaNeue", "Helvetica Neue", "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 400;
+}
+.alert h4 {
+	font-weight: bold;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	section {
+		width: 300px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.content {
+		margin: 40px auto 40px auto;
+	}
+}
+/* Smartphones (landscape) - a few percent ----------- */
+@media only screen 
+and (min-device-width : 480px) 
+and (max-device-width : 640px) {
+	section {
+		width: 450px;
+	}
+	.content {
+		margin: 40px auto 40px auto;
+	}
+}
+/* iPads (portrait and landscape) (~2%) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	section {
+		width: 750px;
+	}
+	.content {
+		margin: 40px auto 40px auto;
+	}
+}
+/* iPads (landscape) (~2%) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	section {
+		width: 1000px;
+	}
+}
+
+
+/* HEADER / NAVIGATIONS
+-------------------------------------------------- */
+
+.navbar-fixed-top {
+	top: auto;
+}
+
+/* NAVBAR */
+.navbar .navbar-scrolled {
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+	margin-top: -50px;
+	position: relative;
+}
+.navbar .navbar-header, .navbar .navbar-collapse {
+	font-family: "HelveticaNeue-Light", "Open Sans Light", Helvetica, sans-serif;
+	padding: 13px 0 10px 0;
+}
+.navbar-scrolled .navbar-header{
+	padding-top: 1px;
+}
+.navbar .navbar-collapse {
+	margin: 0;
+	padding: 15px 0 7px 0;
+	background: url('../images/header_hr.png') no-repeat bottom center;
+}
+.navbar-scrolled .navbar-collapse{
+	padding-top: 1px;
+	padding-bottom: 0;
+	background: none;
+}
+.navbar-default {
+	color: #1f2021;
+	font-size: 12px;
+	text-align: right;
+	text-shadow: 0 1px 0 #48484a;
+	border: none;
+	min-height: 0;
+	background-color: transparent;
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.3s;
+}
+.navbar-default .navbar-scrolled {
+	background-color: #222;
+	height: 50px;
+
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.3s;
+
+    -webkit-transition: background-color 0.3s linear;
+    -moz-transition: background-color 0.3s linear;
+    -o-transition: background-color 0.3s linear;
+    -ms-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;
+}
+.navbar-default .navbar-collapse {
+	color: #fff;
+	text-shadow: none;
+}
+.navbar .navbar-brand {
+	background: url("../images/cloud9_logo.png") no-repeat left 5px;
+	margin: 0 ;
+	padding: 0;
+	height: 45px;
+}
+.navbar-scrolled .navbar-brand {
+	padding: 0;
+	height: 45px;
+}
+.logo-name {
+	color: #fff;
+	position: relative;
+	font-family: BelloScript;
+	top: 15px;
+	margin: 5px 0 0 73px;
+	font-size: 45px;
+}
+.navbar-scrolled .logo-name {
+	font-size: 40px;
+	top: 14px;
+}
+.navbar .navbar-nav {
+	float: right;
+	top: 15px;
+	right: 0;
+	margin: 0;
+}
+.navbar .navbar-nav img {
+	height: 21px;
+	margin: -3px 0 0 0; 
+	padding: 0; 
+	position: relative
+}
+.navbar-default .navbar-nav>li>a {
+	padding: 15px 35px 0 0;
+	text-transform: uppercase;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+	font-size: 14px;
+}
+.navbar-default .navbar-scrolled .navbar-nav>li>a {
+	color: #f1f1f1;
+	font-size: 13px;
+}
+.navbar-default .navbar-nav>li.active>a, .navbar-default .navbar-nav>li.active>a:hover {
+	color: #bfe965;
+	background-color: transparent;
+	cursor: default;
+}
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+}
+.navbar-default .navbar-nav>li>a:hover {
+	color: #bfe965;
+	background-color: transparent;
+}
+.navbar-nav>li>a.navHome, .navbar-nav>li>a:hover.navHome {
+	background: url('../images/btn-home.png') no-repeat center left;
+	padding: 0px 0 0 35px;
+	margin: 15px 35px 0 0;
+}
+.navbar-nav>li>a:hover.navHome {
+	background: url('../images/btn-home.png') no-repeat center left;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-default .navbar-toggle:hover {
+    background-color: #A7D516;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.navbar .navbar-header, .navbar .navbar-collapse {
+	    padding: 10px 0px 2px;
+	    background: url('../images/header_hr_small.png') no-repeat bottom center;
+	}
+	.navbar .navbar-scrolled .navbar-header, .navbar .navbar-scrolled .navbar-collapse {
+ 		padding: 1px 0 0 0;
+ 		background: none;
+ 		border: none; 
+ 	}
+	.navbar .navbar-brand {
+		background: url("../images/cloud9_logo_small.png") no-repeat left top;
+		margin: 0;
+		padding: 0;
+		height: 33px;
+	}
+	.navbar-scrolled .navbar-brand {
+		background-position: 3px;
+	}
+	.navbar-default .navbar-scrolled {
+		height: 40px;
+	}
+	.navbar-scrolled .navbar-nav {
+		background: #222;
+		padding: 20px;
+	}
+	.logo-name {
+		top: 5px;
+		margin: 5px 0 0 58px;
+		font-size: 35px;
+	}
+	.navbar-scrolled .logo-name {
+		font-size: 30px;
+		top: 8px;
+	}
+	.navbar-toggle {
+		margin-right: 3px;
+		margin-top: 4px;
+		padding: 7px 8px;
+	}
+	.navbar .navbar-collapse {
+		background-color: #fff;
+		padding: 20px;
+	}
+	.navbar-scrolled .navbar-collapse {
+		background: none;
+	}
+	.navbar-default .navbar-collapse .navbar-nav > li > a {
+		color: #222;
+	}
+	.navbar-default .navbar-collapse .navbar-nav > li > a:hover {
+		color: #222;
+		text-decoration: underline;
+	}
+	.navbar-scrolled .navbar-collapse .navbar-nav > li > a {
+		color: #fff;
+	}
+	.navbar-default .navbar-scrolled .navbar-collapse .navbar-nav .btnLogin {
+ 		margin-top: 7px;
+ 	}
+}
+/* iPads (portrait) (~2%) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	section {
+		width: 750px;
+	}
+	.content {
+		margin: 40px auto 40px auto;
+	}
+}
+
+
+/* FOOTER
+-------------------------------------------------- */
+footer {
+	background: #000;
+	color: rgba(255,255,255,0.5);
+	font-size: 13px;
+	letter-spacing: 1px;
+	-webkit-font-smoothing: subpixel-antialiased;
+	padding: 40px 0 80px 0;
+}
+footer .intro {
+	text-align: left;
+	padding: 0 80px 0 0;
+}
+footer .intro .logo-name {
+	top: 0;
+	margin: 0 0 10px 0;
+	padding: 0;
+	font-size: 2.5em;
+	background: url("../images/cloud9_logo.png") no-repeat left 5px;
+	text-indent: -999px;
+	overflow: hidden;
+	display: block;
+}
+footer .menu {
+	text-align: left;
+	margin-top: 23px;
+}
+footer .menu h3 {
+	font-size: 14px;
+	margin: 10px 0 10px 0;
+	color: #f1f1f1;
+}
+footer .menu ul {
+	list-style-type: none;
+	font-size: 1.0em;
+	margin: 0;
+	padding: 0;
+}
+footer .menu ul li {
+	font-size: 1.0em;
+	margin: 0 0 2px 0;
+}
+footer .menu ul li a {
+	color: rgba(255,255,255,0.4);
+}
+footer .applications {
+	display: table-cell; 
+	float: none;
+	height: 135px;
+	vertical-align: middle;
+	text-align: center;
+}
+footer .applications a.sign-up {
+	background-color: #fff;
+	color: #000;
+	text-transform: uppercase;
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", "Open Sans Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+footer .applications  a:hover {
+	color: #23a4b1;
+}
+footer .copyright, footer .copyright .col-md-12 {
+	padding: 10px 0 0 0;
+	color: rgba(255,255,255,0.5);
+	text-align: left;    
+}
+/* If only the header or footer are shown (e.g. in the Support page) they need a height */
+iframe.only-header, iframe.only-footer {
+	margin: -60px 0 0 0;
+	padding: 0;
+	border: none;
+	overflow: hidden;
+	width: 100%;
+	height: 60px;
+}
+iframe.only-footer {
+	height: 325px;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	footer {
+		padding: 20px 0 40px 0;
+	}
+	footer .row {
+		margin: 0;
+		/*padding: 0;*/
+	}
+	footer .intro, footer .menu {
+		padding: 0 10px 0 10px;
+	}
+	footer .col-sm-3 {
+		padding: 0;
+		margin-bottom: 20px;
+	}
+	footer .applications {
+		height: auto;
+	}
+	footer .applications a.sign-up {
+		color: #000;
+	}
+	footer .applications  a:hover {
+		color: #bfe965;
+	}
+	footer .copyright, footer .copyright .col-md-12 {
+		padding: 10px 0 10px 5px;
+	}
+}
+/* iPads (portrait and landscape) (~2%) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	footer .intro {
+		padding-right: 20px;
+	}
+	footer .applications {
+		float: left;
+	}
+	footer .applications a.sign-up {
+		margin: 10px 0 0 -5px;
+	}
+}
+
+/* LOGIN/LOGOUT
+-------------------------------------------------- */
+
+/* LOGIN */
+#auth-box {
+	position: relative; 
+	right: 30px;
+	background-color: #3C3D3F; 
+	background-image: url(../images/45-degree-fabric-dark.png);
+	width: 254px; 
+	height: 70px; 
+	border-radius: 0 0 8px 8px; 
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5); 
+	padding: 14px 0 0 0;
+	z-index: -1
+}
+.navbar-default .navbar-nav>li>a.btnLogin {
+	white-space: nowrap;
+	background-color: transparent;
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", "Open Sans Light", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 400; 
+	height: 40px;
+	line-height: 0px;
+	margin: 4px 0 0 0;
+	padding: 0 20px 0 20px;
+	height: 40px;
+	line-height: 38px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	vertical-align: middle;
+}
+.navbar-default .navbar-nav>li>a#navSignUp, .navbar-scrolled .navbar-nav>li>a.btnLogin {
+	margin: 7px 0 0 0;
+	padding: 0 18px 0 18px;
+	height: 34px;
+	line-height: 30px;
+}
+#navSignUp{
+	display: none;
+	background-color: rgba(255, 255, 255, 0.28);
+	color: #fff;
+}
+#navSignUp:hover{
+	background-color: #A7D516;
+	color: #333;
+}
+.navbar-scrolled #navSignUp{
+	display: inline-block;
+}
+.navbar-scrolled .login .btnLogin {
+	border: 2px solid #f1f1f1;
+	border-radius: 6px;
+	margin: 8px 0 0 0;
+	padding: 0 15px 0 15px;
+	height: 31px;
+	line-height: 29px;
+}
+.navbar-nav>li>a.btnLogin, .navbar-nav>li>a:hover.btnLogin {
+	text-decoration: none;
+}
+.navbar-nav>li>a:hover.btnLogin {
+	color: #bfe965;
+}
+.navbar-nav>li>a.altLogin {
+	margin: 15px 5px 0 15px;
+	padding: 0;
+	line-height: 20px;
+	color: transparent; /* hide the text that's only used for the mobile menu */
+	text-transform: none;
+}
+.navbar-nav>li>a.github {
+	background: url("../images/login-icons.png") no-repeat 0 0;
+	width: 24px;
+	height: 24px;
+	margin: 10px 25px 0 0;
+	padding: 0;
+}
+.navbar-scrolled .navbar-nav>li>a.github{
+	margin-right: 15px;
+	color: transparent; /* hide the text that's only used for the mobile menu */
+}
+.navbar-nav>li>a:hover.github {
+	background: url("../images/login-icons.png") no-repeat -25px 0;
+	color: transparent; /* hide the text that's only used for the mobile menu */
+}
+.navbar-scrolled .navbar-nav>li>a.bitbucket{
+	color: transparent; /* hide the text that's only used for the mobile menu */
+}
+.navbar-nav>li>a.bitbucket {
+	background: url("../images/login-icons.png") no-repeat 0 -28px;
+	width: 24px;
+	height: 24px;
+	margin: 10px 0 0 0;
+	color: transparent; /* hide the text that's only used for the mobile menu */
+}
+.navbar-nav>li>a:hover.bitbucket {
+	/*TODO: use right image on hover*/
+	background: url("../images/login-icons.png") no-repeat -25px -28px;
+	color: transparent; /* hide the text that's only used for the mobile menu */
+}
+
+/*LOGGED OUT STATE*/
+.logged-out .login {
+	display: inline-block;
+	position: relative;
+	margin: 0 25px 0 0;
+}
+.logged-out .navbar-scrolled .login {
+	margin-right: 15px;
+}
+.logged-out .navbar-scrolled .signin{
+	margin-right: 25px;
+}
+.logged-out .logout {
+	display: none;
+}
+
+/*LOGGED IN STATE*/
+.logged-in .login, .logged-in .altLogin {
+	display: none;
+}
+.logged-in .logout {
+	width: auto;
+	margin: 0 0 0 0px;
+}
+.logged-in .logout a {
+	display: inline-block;
+}
+.logged-in .logout button.btnLogout{
+	display: inline-block;
+}
+.logged-in .logout button.btnLogout{
+	white-space: nowrap;
+	background-color: transparent;
+	color: #fff;
+	font-size: 14px;
+	margin: 0px 0px 5px 0;
+	padding: 2px 17px 0 20px;
+	border: 2px solid #fff;
+	line-height: 21px;
+	height: 40px;
+	border-radius: 5px;
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", "Open Sans Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+	text-transform: uppercase;
+	vertical-align: middle;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: 0.5px;
+	box-sizing: border-box;
+}
+.logged-in .logout button.btnLogout:active{
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+.logged-in .logout button.btnLogout:focus{
+	outline: none;
+}
+.logged-in .logout button.btnLogout:hover {
+	color: #bfe965;
+}
+.logged-in .navbar-scrolled .logout button.btnLogout{
+	height: 33px;
+	padding: 2px 15px 0 15px;
+	font-size: 13px;
+	color: #fff;
+	border-color: #fff;
+}
+.logged-in .navbar-scrolled .logout button.btnLogout:hover {
+	color: #bfe965;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.navbar-collapse .nav > li {
+		width: auto;
+		margin: 0;
+	}
+	.navbar-collapse .nav > li > a {
+		padding: 5px 0 15px 0;
+		width: 100%;
+	}
+	.navbar-collapse .nav > li > a:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+	.navbar-collapse .nav > li > a.btnLogin, .navbar-collapse .nav > li > a.btnLogin:hover {
+		padding: 5px 0 0 0;
+		border-color: #000;
+		padding: 5px;
+		margin: 0 0 10px 0;
+		height: auto;
+		width: auto;
+		line-height: inherit;
+		display: inline-block;
+	}
+	.navbar-nav .navbar-collapse > li > a.github {
+		width: 100%;
+	}
+	.logged-out .navbar-collapse .login {
+		display: block;
+		margin: 0;
+	}
+	.navbar-nav > li > a.github, .navbar-nav > li > a:hover.github, .navbar-nav > li > a.bitbucket, .navbar-nav > li > a:hover.bitbucket {
+		margin: 0;
+		padding: 0;
+		background: none;
+	}
+	.navbar-collapse .nav > li.active>a, .navbar-collapse .nav > li.active>a:hover {
+		color: #bfe965;
+		font-weight: bold;
+	}
+	.login .btnLogin {
+		font-weight: 300;
+	}
+	.logged-in .logout button.btnLogout {
+		color: #000;
+		height: auto;
+		border-color: #000;
+	}
+	.navbar-scrolled .navbar-nav > li > a.github, .navbar-scrolled .navbar-nav > li > a:hover.github, .navbar-scrolled .navbar-nav > li > a.bitbucket, .navbar-scrolled .navbar-nav > li > a:hover.bitbucket {
+		color: #fff;
+	}
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+/* Retina-specific stuff here */
+@media 
+(-webkit-min-device-pixel-ratio: 1.25), 
+(min-resolution: 120dpi){ 
+    
+    /*.browser-frame{*/
+    /*	box-shadow: none;*/
+    /*}*/
+    
+    /*#carrousel .browser-frame:hover{*/
+    /*	box-shadow: none;*/
+    /*}*/
+}

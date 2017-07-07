@@ -1,0 +1,990 @@
+/* HOMEPAGE
+-------------------------------------------------- */
+
+/* GLOBAL HOMEPAGE STYLES */
+.homepage {
+    font-size: 18px;
+}
+
+.browser-frame{
+    width: 990px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.46);
+    position: relative;
+    display: inline-block;
+    transition-property: box-shadow;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+}
+.browser-frame:before{
+    content: "";
+    height: 46px;
+    display: block;
+    border-radius: 4px 4px 0 0;
+    background: url('../images/browser-arrows.png') no-repeat 11px 17px, -webkit-linear-gradient(left top,  #f2f2f2 0%, #d5d5d5 100%); /* For Safari 5.1 to 6.0 */
+    background: url('../images/browser-arrows.png') no-repeat 11px 17px, -o-linear-gradient(bottom right,  #f2f2f2 0%, #d5d5d5 100%); /* For Opera 11.1 to 12.0 */
+    background: url('../images/browser-arrows.png') no-repeat 11px 17px, -moz-linear-gradient(bottom right,  #f2f2f2 0%, #d5d5d5 100%); /* For Firefox 3.6 to 15 */
+    background: url('../images/browser-arrows.png') no-repeat 11px 17px, linear-gradient(to bottom right,  #f2f2f2 0%, #d5d5d5 100%); /* Standard syntax */
+}
+.browser-frame .title{
+    border-radius: 4px;
+    background: white url('../images/secure.png') no-repeat 5px 5px;
+    display: block;
+    position: absolute;
+    left: 60px;
+    top: 9px;
+    right: 10px;
+    font-size: 14px;
+    height: 28px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px rgba(255,255,255,0.4);
+    font-family: Arial;
+    text-align: left;
+    padding: 3px 5px 5px 24px;
+    color: #333;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+.browser-frame .title span{
+    color: #00a019;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .homepage {
+        font-size: 16px;
+    }
+    img, video {
+        max-width: 300px;
+    }
+    .browser-frame{
+        max-width: 300px;
+    }
+    .browser-frame:before {
+        height: 38px;
+        background: url('../images/browser-arrows-small.png') no-repeat 11px 14px, -webkit-linear-gradient(left top,  #f2f2f2 0%, #d5d5d5 100%); /* For Safari 5.1 to 6.0 */
+        background: url('../images/browser-arrows-small.png') no-repeat 11px 14px, -o-linear-gradient(bottom right,  #f2f2f2 0%, #d5d5d5 100%); /* For Opera 11.1 to 12.0 */
+        background: url('../images/browser-arrows-small.png') no-repeat 11px 14px, -moz-linear-gradient(bottom right,  #f2f2f2 0%, #d5d5d5 100%); /* For Firefox 3.6 to 15 */
+        background: url('../images/browser-arrows-small.png') no-repeat 11px 14px, linear-gradient(to bottom right,  #f2f2f2 0%, #d5d5d5 100%); /* Standard syntax */
+    }
+    .browser-frame .title {
+        top: 7px;
+        right: 7px;
+        font-size: 12px;
+        height: 25px;
+        background-position: 5px 3px;
+    }
+}
+/* Smartphones (landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 480px)
+and (max-device-width : 640px) {
+    img, video {
+        max-width: 400px;
+    }
+    .browser-frame{
+        max-width: 400px;
+    }
+}
+/* iPads (portrait) (~2%) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    img, video {
+        max-width: 700px;
+    }
+    .browser-frame{
+        max-width: 700px;
+    }
+}
+/* iPads (landscape) (~2%) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    img, video {
+        max-width: 980px;
+    }
+    .browser-frame{
+        max-width: 980px;
+    }
+}
+
+
+/* TOP HEADER */
+.homepage .top-header {
+    background-image: url('../images/header_bg.jpg'), url('../images/header_bg_repeat.jpg');
+    background-position: left 0, left top;
+    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed, fixed;
+    min-height: 750px;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    position: relative;
+}
+.homepage .top-header h1 {
+    margin: 31px 0 0 0;
+    line-height: 1.2em;
+    font-size: 42px;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+.homepage .top-header h2 {
+    line-height: 1.2em;
+    font-size: 21px;
+    color: #fff;
+    text-align: center;
+    padding: 0 240px 10px 240px;
+    z-index: 1;
+    margin-top: 16px;
+}
+.homepage .top-header .payoff, .homepage .top-header .more {
+    position: absolute;
+    width: 1100px;
+    margin: 100px auto 0 auto;
+    z-index: 1;
+    text-align: center;
+}
+.homepage .top-header .more {
+    margin-top: 272px;
+}
+#learnMore {
+    margin-right: 0;
+}
+.homepage .top-header .more a {
+    font-family: "HelveticaNeue-Bold", "Open Sans Bold", "Helvetica", sans-serif;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    height: 50px;
+    width: 175px;
+    margin: 0;
+    padding: 13px 15px 0 15px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+.homepage .top-header .more a.sign-up {
+    background-color: #fff;
+    color: #23a4b1;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.homepage .top-header .more a.learn-more {
+    font-weight: 700;
+    margin-left: 10px;
+}
+.homepage .top-header .more a.sign-up:hover {
+    background-color: #A7D516;
+    color: #FFF;
+}
+.homepage .top-header .more a.learn-more:hover{
+    color: #bfe965;
+}
+
+/*CARROUSEL*/
+.homepage .top-header .carrousel {
+    text-align: center;
+    z-index: 1000;
+}
+.homepage .top-header .screenshots {
+    position: relative;
+    bottom: -390px;
+    z-index: 1000;
+}
+.homepage .top-header .carrousel .slick-prev {
+    background: magenta;
+}
+.homepage .top-header .carrousel .slick-next {
+    background: yellow;
+}
+#carrousel .btnleft, #carrousel .btnright{
+    background: url("../images/carrousel_buttons.png");
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 0;
+    margin-left: -600px;
+}
+#carrousel .btnleft:hover{
+    background-position: 0 -52px;
+}
+#carrousel .btnright{
+    background-position: -52px 0;
+    margin-left: 550px;
+}
+#carrousel .btnright:hover{
+    background-position: -52px -52px;
+}
+.page{
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 1100px;
+    bottom: 0;
+    overflow: hidden;
+}
+.page.active{
+    display: block;
+}
+.carrousel-navigation{
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: default;
+    position: absolute;
+    top: 142px;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+    z-index: 1000;
+}
+.carrousel-navigation span{
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #c5e8f2;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.carrousel-navigation span.active{
+    background: #c5e8f2;
+}
+#carrousel2 .page{
+    top: 52px;
+}
+#carrousel .browser-frame{
+    cursor: pointer;
+}
+#carrousel .browser-frame:hover{
+    box-shadow: 0 2px 30px rgba(0,0,0,0.6);
+}
+.browser-frame .screenshot{
+    border-radius: 0 0 4px 4px;
+}
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .homepage .top-header {
+        min-height: 450px;
+    }
+    .homepage .page {
+        max-width: 300px;
+    }
+    .homepage .top-header .payoff, .homepage .top-header .more {
+        width: 100%;
+        margin-top: 60px;
+    }
+    .homepage .top-header h1 {
+        margin: 10px 0 0 0;
+        line-height: 1.2em;
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+        z-index: 1;
+    }
+    .homepage .top-header h2 {
+        font-size: 16px;
+        padding: 0 10px 10px 10px;
+        margin-top: 16px;
+    }
+    .homepage .top-header .more {
+        margin-top: 220px;
+    }
+    .homepage .top-header .more a {
+        font-size: 14px;
+        height: 40px;
+        width: 120px;
+        margin: 0px;
+        padding: 10px 5px 0px;
+    }
+    .homepage .top-header .screenshots {
+        bottom: -285px;
+    }
+    .browser-frame .screenshot {
+        max-width: 300px;
+    }
+}
+/* Smartphones (landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 480px)
+and (max-device-width : 640px) {
+    .homepage .top-header {
+        min-height: 400px;
+    }
+    .homepage .page {
+        max-width: 480px;
+    }
+    .homepage .top-header h2 {
+        margin-top: 10px;
+    }
+    .homepage .top-header .more {
+        margin-top: 200px;
+    }
+    .homepage .top-header .screenshots {
+        bottom: -265px;
+    }
+    .browser-frame .screenshot {
+        max-width: 400px;
+    }
+}
+/* iPads (portrait) (~2%) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    .homepage .page {
+        max-width: 720px;
+    }
+    .homepage .top-header .screenshots {
+        bottom: -440px;
+    }
+    .homepage .top-header .payoff, .homepage .top-header .more {
+        max-width: 100%;
+    }
+    .homepage .top-header h1 {
+        margin: 30px 50px 0px 50px;
+    }
+    .homepage .top-header h2 {
+        padding: 0 60px 10px 60px;
+    }
+    .homepage .top-header .more {
+        margin-top: 340px;
+    }
+}
+/* iPads (landscape) (~2%) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    .homepage .page {
+        max-width: 980px;
+    }
+    .homepage .top-header .screenshots {
+        bottom: -440px;
+    }
+    .homepage .top-header .payoff, .homepage .top-header .more {
+        max-width: 100%;
+    }
+    .homepage .top-header h1 {
+        margin: 30px 180px 0 180px;
+    }
+    .homepage .top-header h2 {
+        padding: 0 190px 10px 190px;
+    }
+    .homepage .top-header .more {
+        margin-top: 340px;
+    }
+}
+
+
+/*FEATURES*/
+.featurette {
+    padding: 40px 0 40px 0;
+}
+.featurette h3 {
+    font-family: "HelveticaNeue-Light", "Open Sans Light", "Helvetica", sans-serif;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+}
+.featurette .feature h3 {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .featurette {
+        padding: 20px 0 20px 0;
+    }
+    .featurette h3 {
+        font-size: 22px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+}
+
+
+/*WORKSPACES*/
+h1.headline {
+    text-align: center;
+    margin: 10px 0 40px 0;
+}
+#workspaces {
+    text-align: center;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+#workspaces .col-md-6 {
+    padding: 0 40px 0 40px;
+}
+#workspaces #workspace-types, #workspaces #workspaces-linux-environment {
+    margin: 40px 0 0px 0;
+}
+#workspaces #workspace-types img {
+    margin: 0 20px 25px 0;
+}
+.workspaces-divider:after{
+    background: #f4f4f4;
+    width: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    bottom: 20px;
+}
+#workspaces .cloning {
+    margin: 0 -120px 0 -120px;
+}
+#workspace-ssh {
+    /*background: rgb(243, 243, 243);*/
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-top: 1px solid whitesmoke;
+}
+.sudoblock {
+    border: 0;
+    padding: 0 0 0 25px;
+    margin: 0;
+    background: transparent;
+    text-align: left;
+    font-size: 22px;
+    line-height: 38px;
+    font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+    color: rgb(167, 167, 167);
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+
+}
+.sudoblock:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 30%, rgba(255, 255, 255, 0.87) 100%);
+}
+.sudoblock span{
+    color: #333;
+}
+.sudoblock .cursor{
+    display: inline-block;
+    width: 11px;
+    height: 23px;
+    background: #333;
+    margin: -4px 0 0 1px;
+    vertical-align: middle;
+}
+
+/* Smartphones (portrait & landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    h1.headline {
+        margin-bottom: 10px;
+    }
+    #workspaces .col-md-6 {
+        padding: 0px 20px;
+    }
+    #workspaces #workspace-types {
+        margin: 20px 0 20px 0;
+    }
+    #workspaces #workspace-types img {
+        margin: 0 10px 10px 0;
+        max-width: 50px;
+    }
+    .workspaces-divider:after {
+        display: none;
+    }
+    #workspaces #workspaces-linux-environment {
+        margin: 20px 0 0 0;
+    }
+    .sudoblock {
+        font-size: 13px;
+        padding: 0 0 5px 0;
+        line-height: 26px;
+    }
+    #workspace-ssh {
+        font-size: 17px;
+        padding: 10px;
+    }
+}
+/* Smartphones (landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 480px)
+and (max-device-width : 640px) {
+    #workspaces #workspace-types img {
+        max-width: 80px;
+    }
+    .sudoblock {
+        padding: 0 20px 5px 20px;
+        font-size: 18px;
+    }
+}
+/* iPads (portrait and landscape) (~2%) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    #workspaces #workspace-types {
+        margin: 20px 100px 40px 100px;
+    }
+    #workspaces #workspace-types img {
+        max-width: 100px;
+    }
+    .sudoblock {
+        padding: 0 20px 5px 20px;
+        font-size: 24px;
+        width: 540px;
+        margin: 0 auto;
+    }
+    #workspace-ssh {
+        font-size: 20px;
+    }
+}
+/* iPads (landscape) (~2%) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    #workspaces #workspace-types {
+        margin: 20px 10px 10px 10px;
+    }
+    #workspaces #workspace-types img {
+        max-width: 80px;
+        margin: 10px 10px 5px 0;
+    }
+    .sudoblock {
+        padding: 0 20px 5px 10px;
+        font-size: 19px;
+    }
+    #workspace-ssh {
+        font-size: 22px;
+    }
+}
+
+/*COLLABORATION*/
+#collaboration {
+    background-image: url('../images/collaboration/collaboration_bg.png');
+    background-position: left 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #3d9ac4;
+    background-size: cover;
+    overflow-y: hidden;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    height: 850px;
+}
+#collaboration h1 {
+    margin: 0;
+    color: #fff;
+    padding: 0 10px 5px 10px;
+}
+#collaboration video{
+    border-radius: 0 0 4px 4px;
+}
+#collaboration #cursor_typing {
+    background: #fff;
+    margin: -3px 0 0 5px;
+    padding: 0 0 0 1px;
+    position: relative;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#collaboration h4 {
+    margin: 5px 0 75px 0;
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", "Open Sans Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #collaboration {
+        height: 400px;
+    }
+    .carrousel-navigation {
+        top: 120px;
+    }
+    #carrousel2 .page {
+        top: 30px;
+    }
+    #collaboration h1 {
+        font-size: 25px;
+    }
+    #collaboration h4 {
+        margin: 5px 0 60px 0;
+        padding: 0 10px 0 10px;
+    }
+}
+/* Smartphones (landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 480px)
+and (max-device-width : 640px) {
+    #collaboration h4 {
+        margin: 5px 20px 60px 0;
+    }
+}
+
+
+/*PREVIEW*/
+#preview h1 {
+    text-align: left;
+}
+#preview .subtitle {
+    font-size: 0.8em;
+    margin: 60px 0 0 0;
+}
+#preview #preview-powered-by {
+    width: 100px;
+}
+#preview .preview-video {
+    text-align: right;
+}
+#preview .preview-video #preview-video-play {
+    position: absolute;
+    top: 190px;
+    left: 370px;
+    padding: 84px 84px 0 0;
+    margin: 0;
+    background: url("../images/video_play_button.png") no-repeat top left;
+}
+#preview .preview-video #preview-video-play:hover {
+    background: url("../images/video_play_button_hover.png") no-repeat top left;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #preview .subtitle {
+        margin: 20px 10px 20px 0;
+        display: inline-block;
+    }
+    #preview .preview-video {
+        text-align: center;
+    }
+    #preview .preview-video #preview-video-play {
+        top: 65px;
+        left: 120px;
+    }
+}
+/* Smartphones (landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 480px)
+and (max-device-width : 640px) {
+    #preview .preview-video {
+        text-align: center;
+    }
+    #preview .preview-video #preview-video-play {
+        top: 100px;
+        left: 200px;
+    }
+}
+/* iPads (portrait and landscape) (~2%) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    #preview .subtitle {
+        margin: 20px 10px 30px 0px;
+        display: inline-block;
+    }
+    #preview .preview-video {
+        text-align: center;
+    }
+    #preview .preview-video #preview-video-play {
+        top: 200px;
+        left: 330px;
+    }
+}
+
+
+/*FEATURES*/
+#features {
+    background: url("../images/featuresbg.jpg") no-repeat top left;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(53, 137, 174, 1);
+    color: #fff;
+    max-height: 924px;
+    overflow-y: hidden;
+    z-index: 1;
+    vertical-align: bottom;
+    padding-bottom: 88px;
+}
+#features h1 {
+    color: #fff;
+    margin-bottom: 60px;
+}
+#features .feature {
+    transition: box-shadow 0.15s 0.05s;
+    border-radius: 5px;
+    background: #fff;
+    width: 330px;
+    margin: 0 auto 25px auto;
+    padding: 15px;
+    color: #000;
+    text-align: center;
+    min-height: 412px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+#features .feature img {
+    border-radius: 5px 5px 0 0;
+    width: 330px;
+    margin: -15px 0 0 -15px;
+}
+#features .feature h4 {
+    /* TODO: Should this be a regular Open Sans? */
+    font-family: "HelveticaNeue-Medium", "Open Sans Semibold", "Helvetica", sans-serif;
+    font-size: 16px;
+}
+#features .feature p {
+    font-family: "HelveticaNeue-Thin", "Open Sans Light", "Helvetica", sans-serif;
+    font-size: 16px;
+}
+#features .feature code {
+    background-color: #000;
+    color: #fff;
+    font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+    -webkit-font-smoothing: antialiased;
+}
+#features-extra {
+    position: absolute;
+    margin: -88px 0 0 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+#features-extra a {
+    width: 100px;
+    height: 88px;
+    background: url("../images/features/features-extra-button@2x.png");
+    background-size: 100px 88px;
+    display: inline-block;
+    outline: none;
+    float: left;
+}
+#features-extra .left-background,
+#features-extra .right-background {
+    width: 50%;
+    background: white;
+    height: 44px;
+    margin-top: 44px;
+    box-sizing: border-box;
+}
+#features-extra .left-background {
+    float: left;
+    margin-left: -50px;
+}
+#features-extra .right-background {
+    float: right;
+    margin-right: -50px;
+}
+#features .row {
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+#features:not(.expanded) .row:nth-child(1n+3){
+    opacity: 0.3;
+}
+
+#features .feature:hover {
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.4);
+}
+
+#features-extra img {
+    margin: 29px;
+}
+
+#features-extra img:hover {
+
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #features .feature {
+        width: 300px;
+        margin: 20px auto 30px auto;
+    }
+    #features {
+        /* Simply show them all; this way the javascript expand doesn't have to take mobile into account either */
+        max-height: 5000px;
+    }
+    #features-extra {
+        display: none;
+    }
+    #features:not(.expanded) .row:nth-child(1n+3){
+        opacity: 1;
+    }
+}
+/* Smartphones (landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 480px)
+and (max-device-width : 640px) {
+    #features .feature {
+        width: 330px;
+        margin: 20px auto 30px auto;
+    }
+    #features {
+        /* Simply show them all; this way the javascript expand doesn't have to take mobile into account either */
+        max-height: 5000px;
+    }
+}
+/* iPads (portrait and landscape) (~2%) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    #features {
+        /* Simply show them all; this way the javascript expand doesn't have to take mobile into account either */
+        max-height: 5000px;
+    }
+    #features-extra {
+        display: none;
+    }
+    #features:not(.expanded) .row:nth-child(1n+3){
+        opacity: 1;
+    }
+}
+/* iPads (landscape) (~2%) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    #features h1 {
+        margin-bottom: 40px;
+    }
+    #features .feature {
+        width: 300px;
+        margin: 20px auto 10px auto;
+        min-height: 370px;
+    }
+    #features .feature p {
+        font-size: 14px;
+    }
+    #features .feature img {
+        max-width: 300px;
+    }
+}
+
+
+/*SOCIAL PROOF (USERS)*/
+#social-users {
+    padding-top: 60px;
+}
+#social-users blockquote {
+    border: none;
+    font-size: 18px;
+}
+#social-users .testimonial {
+    margin: 0;
+    padding: 10px 10px 20px 10px;
+    display: none;
+}
+#social-users .testimonial blockquote {
+    padding: 0 10px 0 10px;
+    margin: 0;
+}
+#social-users .testimonial blockquote img.avatar {
+    float: left;
+    margin: 0 25px 10px 0;
+    width: 100px;
+    border-radius: 50%;
+}
+#social-users .testimonial blockquote img.quote, #social-users .testimonial blockquote img.unquote {
+    float: none;
+    border-radius: 0;
+    width: 25px;
+    padding: 0;
+    margin: -15px 5px 0 0;
+}
+#social-users .testimonial blockquote img.unquote {
+    margin: 10px 0 0 0;
+}
+#social-users .testimonial blockquote footer {
+    background: transparent;
+    color: #252525;
+    font-size: 12px;
+    padding: 0;
+}
+#social-users .testimonial blockquote footer .name {
+    padding: 10px 5px 10px 0;
+    font-weight: bold;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #social-users {
+        padding-top: 20px;
+    }
+    #social-users blockquote {
+        font-size: 16px;
+    }
+    #social-users .testimonial blockquote img.avatar {
+        width: 70px;
+        margin: 0px 15px 5px 10px;
+    }
+    #social-users .testimonial blockquote img.quote, #social-users .testimonial blockquote img.unquote {
+        width: 20px;
+    }
+}
+
+
+/*SOCIAL PROOF (COMPANIES)*/
+#social-companies {
+    background-color: #959f0a; /* olive green */
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    padding: 60px 0 60px 0;
+    margin: 0;
+}
+#social-companies h1 {
+    margin: 0 0 40px 0;
+    color: #fff;
+}
+#social-companies img {
+    margin: 0 20px 0 0;
+}
+
+/* Smartphones (portrait and landscape) - a few percent ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #social-companies {
+        padding: 30px 0px;
+    }
+    #social-companies h1 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+    #social-companies img {
+        margin: 0 20px 10px 20px;
+    }
+}

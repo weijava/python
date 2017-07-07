@@ -1,0 +1,396 @@
+
+* {
+  margin: 0 ;
+  padding: 0;
+  border: 0; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.clear {
+  clear: both; }
+
+body {
+  font-family: "Arial", "Microsoft YaHei";
+  line-height: 1.5; }
+
+#top .topBG {
+  background: url("../images/topBG.png") no-repeat center center;
+  width: 100%;
+  
+  height: 30%;
+  min-height: 307px;
+  min-width: 1000px; 
+}
+#top .menu {
+  height: 50px;
+  background-color: #002b82;
+  min-width: 1000px; }
+  #top .menu ul {
+    width: 1000px;
+    margin: 0 auto;
+    list-style: none; }
+    #top .menu ul li {
+      float: left;
+padding-left: 30px;
+    /*  padding-left: 42px;  */
+    }
+      #top .menu ul li a {
+        color: #fff;
+        display: inline-block;
+        line-height: 48px;
+        font-size: 16px; }
+        #top .menu ul li a:hover {
+          border-bottom: 2px solid #1beefe;
+          text-decoration: none; }
+    #top .menu ul .selected a {
+      border-bottom: 2px solid #1beefe; }
+    #top .menu ul .first {
+      padding-left: 5px; }
+
+.iContent {
+  background-color: #f7f7f7;
+  min-width: 1000px;
+
+  min-height: 65%; }
+  .iContent .iContentInner {
+    width: 1000px;
+    margin: 0 auto;
+    background: url("../images/xian.png") repeat-y 664px 0; }
+    .iContent .iContentInner .iLeft {
+      width: 664px;
+      float: left;
+      padding: 23px 0 35px; }
+
+      .iContent .iContentInner .iLeft .lunbo {
+        width: 639px;
+        height: 283px;
+        margin-bottom: 15px;
+        box-shadow: 0px 3px 5px #d4d4d4;
+        position: relative; }
+        .iContent .iContentInner .iLeft .lunbo .arrow-left {
+          background: url("../images/arrow_l.png") no-repeat left top;
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          margin-top: -21px;
+          width: 19px;
+          height: 42px;
+          z-index: 2; }
+        .iContent .iContentInner .iLeft .lunbo .arrow-right {
+          background: url("../images/arrow_r.png") no-repeat left bottom;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          margin-top: -21px;
+          width: 19px;
+          height: 42px;
+          z-index: 2; }
+.iContent .iContentInner .iLeft .lunbo .pagination {
+          position: absolute;
+          z-index: 2;
+          bottom: 23px;
+          left: 0;
+          width: 100%;
+          
+          text-align: center; }
+ .iContent .iContentInner .iLeft .lunbo .pagination .swiper-pagination-switch {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #959595;
+            margin: 0 5px;
+            cursor: pointer; }
+.iContent .iContentInner .iLeft .lunbo .pagination .swiper-active-switch {
+            background: #1d4da5; }
+.iContent .iContentInner .iLeft .conference {
+        width: 639px; 
+
+      }
+        .iContent .iContentInner .iLeft .conference .conferenceTitle {
+          height: 39px;
+          line-height: 39px;
+          padding-left: 30px;
+          background: #a2c9f0 url("../images/conferenceTitleBG.png") no-repeat 0 0;
+          font-size: 22px;
+          margin-bottom: 23px;
+          color: #0f5da2; }
+          .iContent .iContentInner .iLeft .conference .conferenceTitle .more {
+            float: right;
+            margin-right: 16px;
+            font-size: 14px;
+            color: #0f5da2; }
+        .iContent .iContentInner .iLeft .conference .conferenceContent {
+          color: #535353; 
+        }
+          .iContent .iContentInner .iLeft .conference .conferenceContent h1 {
+            font-size: 48px;
+            line-height: 48px;
+            margin-bottom: 10px;
+            color: #c3c3c3;
+            font-family: "segoe ui";
+            font-weight: normal; }
+          .iContent .iContentInner .iLeft .conference .conferenceContent h4 {
+            font-size: 16px;
+            font-family: "segoe ui";
+            font-weight: lighter;
+            margin-bottom: 10px; }
+          .iContent .iContentInner .iLeft .conference .conferenceContent h2 {
+            font-size: 18px;
+            color: #004387;
+            margin-bottom: 10px; }
+          .iContent .iContentInner .iLeft .conference .conferenceContent p {
+            text-indent: 2em;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 10px; 
+          padding-left: 5px;}
+      .iContent .iContentInner .iLeft .list {
+        padding-right: 24px; }
+        .iContent .iContentInner .iLeft .list .title {
+          line-height: 40px;
+          padding-left: 17px;
+          background-color: #c9deef;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          color: #146da5;
+          font-size: 20px; }
+        .iContent .iContentInner .iLeft .list .listContent {
+          padding: 12px 0 13px;
+          border-bottom: 1px dashed #b6cbff; }
+          .iContent .iContentInner .iLeft .list .listContent ul {
+            list-style: none; }
+            .iContent .iContentInner .iLeft .list .listContent ul li {
+              padding-left: 33px;
+              background: url("../images/blueDian.png") no-repeat 13px center; }
+              .iContent .iContentInner .iLeft .list .listContent ul li a {
+                font-size: 14px;
+                color: #535353;
+                line-height: 2.5; }
+              .iContent .iContentInner .iLeft .list .listContent ul li span {
+                float: right;
+                color: #8a8a8a;
+                font-size: 12px;
+                line-height: 35px; }
+        .iContent .iContentInner .iLeft .list .page {
+          text-align: center;
+          padding-top: 45px;
+          color: #707070;
+          font-size: 14px; }
+          .iContent .iContentInner .iLeft .list .page a {
+            display: inline-block;
+            padding: 4px 10px;
+            font-family: "segoe ui";
+            font-size: 12px;
+            color: #545454;
+            border-radius: 2px;
+            background: url("../images/pageA.png") repeat-x;
+            border: 1px solid #dcdcdc; }
+      .iContent .iContentInner .iLeft .htmlPage {
+        padding-right: 24px; }
+        .iContent .iContentInner .iLeft .htmlPage .title {
+          padding: 20px 0 8px;
+          border-bottom: 1px dashed #b6cbff;
+          background: url("../images/newsTitle.png") no-repeat 0 bottom; }
+          .iContent .iContentInner .iLeft .htmlPage .title h1 {
+            font-size: 28px;
+            color: #194891;
+            font-weight: lighter;
+            line-height: 1.3;
+            margin-bottom: 15px; }
+        .iContent .iContentInner .iLeft .htmlPage .htmlPageContent {
+          padding: 40px 0 5px;
+          color: #535353;
+          font-size: 14px; }
+          .iContent .iContentInner .iLeft .htmlPage .htmlPageContent p {
+            margin-bottom: 20px;
+            text-indent: 2em;
+            line-height: 1.8; }
+          .iContent .iContentInner .iLeft .htmlPage .htmlPageContent h2 {
+            margin-bottom: 20px;
+            color: #146da5;
+            font-size: 16px;
+            font-weight: normal; }
+      .iContent .iContentInner .iLeft .news {
+        padding-right: 24px; }
+        .iContent .iContentInner .iLeft .news .title {
+          padding: 20px 0 25px;
+          border-bottom: 1px solid #194891;
+          text-align: center; }
+          .iContent .iContentInner .iLeft .news .title h1 {
+            font-size: 28px;
+            color: #313131;
+            font-weight: lighter;
+            line-height: 1.3;
+            margin-bottom: 15px; }
+          .iContent .iContentInner .iLeft .news .title .time {
+            color: #898989;
+            font-size: 12px; }
+        .iContent .iContentInner .iLeft .news .newsContent {
+          padding: 30px 0 5px;
+          color: #535353;
+          font-size: 14px; }
+          .iContent .iContentInner .iLeft .news .newsContent p {
+            margin-bottom: 20px;
+            text-indent: 2em;
+            line-height: 1.8; }
+        .iContent .iContentInner .iLeft .news .share {
+          text-align: right; }
+          .iContent .iContentInner .iLeft .news .share .jiathis_style {
+            float: right; }
+    .iContent .iContentInner .iRight {
+     /* font-family: "segoe ui";  */
+     font-family: "Arial", "Microsoft YaHei";
+      width: 335px;
+      height: 1150px;
+      min-height:60%;
+      float: right;
+      padding-top: 23px; 
+    }
+      .iContent .iContentInner .iRight .undertake {
+        width: 311px;
+        height: 283px;
+        float: right;
+        background-color: #fff;
+        box-shadow: 0px 3px 5px #d4d4d4;
+        border-radius: 5px;
+        margin-bottom: 16px; }
+        .iContent .iContentInner .iRight .undertake .title {
+          font-size: 20px;
+          line-height: 40px;
+          padding-left: 17px;
+          background-color: #2a8cd6;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          color: #fff; }
+        .iContent .iContentInner .iRight .undertake .undertakeContent {
+          padding: 17px; }
+          .iContent .iContentInner .iRight .undertake .undertakeContent h1 {
+            font-size: 16px;
+            margin: 10px 0 5px; }
+            .iContent .iContentInner .iRight .undertake .undertakeContent h1 a {
+              color: #2b4687; }
+          .iContent .iContentInner .iRight .undertake .undertakeContent p {
+            font-size: 14px;
+            text-indent: 2em; }
+            .iContent .iContentInner .iRight .undertake .undertakeContent p a {
+              color: #373737; }
+      .iContent .iContentInner .iRight .organizer {
+        float: right;
+        width: 311px;
+        height: 204px;
+        background-color: #fff;
+        box-shadow: 0px 3px 5px #d4d4d4;
+        border-radius: 5px;
+        margin-bottom: 20px; }
+        .iContent .iContentInner .iRight .organizer .title {
+          font-size: 20px;
+          line-height: 40px;
+          padding-left: 17px;
+          background-color: #146da5;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          color: #fff; }
+        .iContent .iContentInner .iRight .organizer .organizerContent {
+          padding: 27px 10px 0; }
+          .iContent .iContentInner .iRight .organizer .organizerContent .or {
+            width: 50%;
+            float: left;
+            text-align: center; }
+            .iContent .iContentInner .iRight .organizer .organizerContent .or img {
+              margin-bottom: 13px; }
+            .iContent .iContentInner .iRight .organizer .organizerContent .or a {
+              font-size: 16px;
+              color: #004aa1; }
+      .iContent .iContentInner .iRight .routes {
+        float: right;
+        width: 311px;
+        height: 221px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 47px;
+        box-shadow: 0px 3px 5px #d4d4d4; }
+        .iContent .iContentInner .iRight .routes .title {
+          font-size: 20px;
+          line-height: 48px;
+          padding-left: 17px;
+          background: url("../images/routesTitleBG.png") no-repeat 0 bottom;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px; } 
+          .iContent .iContentInner .iRight .routes .title a {
+            color: #044681; }
+        .iContent .iContentInner .iRight .routes .routesContent {
+          padding: 10px 18px; }
+          .iContent .iContentInner .iRight .routes .routesContent a {
+            color: #044681; }
+          .iContent .iContentInner .iRight .routes .routesContent h1 {
+            font-size: 16px;
+            font-weight: normal;
+            margin-bottom: 5px; }
+          .iContent .iContentInner .iRight .routes .routesContent p {
+            font-size: 14px;
+            line-height: 1.8; }
+
+#foot {
+  min-width: 1000px;
+  background-color: #d7d7d7;
+  height: 46px;
+  max-height: 7%;
+  /* line-height: 96px; */
+  text-align: center;
+  font-size: 12px;
+  font-family: "Arial", "SimSun";
+  color: #565656; 
+
+ /* margin-bottom: -30px; */
+}
+
+/*# sourceMappingURL=style.css.map */
+
+#history_id li{
+  margin-left: 20px;
+}
+.org_table{
+  width:700px;
+  font-family: "Arial", "Microsoft YaHei";
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+
+/* 设置标题样式*/
+h3.org_title{
+  color: #0f5da2;
+  font-family: "Arial", "Microsoft YaHei";
+
+}
+/* 设置路线元素格式*/
+ p.road span{
+color: #0f5da2;
+font-size: 1.1em;
+}
+
+table.article_style{
+  border:solid ;
+  border-width: 0.2px 0px 0px 0.2px;
+}
+.article_style td,th{
+
+   border:solid;
+   border-width:0px 0.3px 0.3px 0px; 
+   padding:2px 0px;
+   text-align: center;
+}
+b{
+  color: black;
+}
+strong{
+  color:red;
+}
+.strong_title{
+ font-size: 1.2em;
+}
